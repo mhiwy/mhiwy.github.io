@@ -9,7 +9,6 @@ tags:
 - github
 - git
 - gitignore
-- Git忽略规则
 ---
 
 # 实现需求
