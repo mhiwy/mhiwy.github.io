@@ -1,7 +1,7 @@
 ---
 layout: blog
 istop: true
-title: "go语言学习笔记"
+title: "go"
 background-image: https://o243f9mnq.qnssl.com/2017/06/116099051.jpg
 date:  2019-12-25
 category: go
