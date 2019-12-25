@@ -1,0 +1,80 @@
+命名管道：只有管道两端都准备好才进行数据流动
+
+内核态和用户态：系统调用的时候CPU切换到内核态
+
+类型判断：switch variable.(type)；variable.(string)
+
+信号：kill命令是关于信号的命令
+
+go:go函数可以有入参
+
+chan:发送方调用close函数关闭通道后，接收方取出通道所有值后会取数据失败
+
+传递信号的通道用struct{}类型的值，不占内存
+
+select语句
+
+```go
+select{
+  case a:=<-b:{
+    
+  }
+  default:{
+    //防止堵塞
+  }
+}
+```
+
+结构体的赋值是值赋值
+
+读取json文件，xml同理
+
+```go
+file,_:=os.Open("")
+var res interface{}
+err:=json.NewDecoder(file).Decode(&res)
+
+```
+
+```go
+runtime.GOMAXPROCS(1) //可以认为此函数设置同时运行的协程数
+```
+
+```go
+runtime.Gosched() //当前协程退出，回到队列等待执行
+```
+
+```go
+	a:=make([]int,5)
+	fmt.Println(len(a))   //5
+	fmt.Println(cap(a))   //5
+	b:=make([]int,5,10)
+	fmt.Println(len(b))  //5   已经有5个空间了，但是如果要用10个空间的话，效率更高
+	fmt.Println(cap(b))   //10
+```
+
+```go
+#string到int
+int,err:=strconv.Atoi(string)
+#string到int64
+int64, err := strconv.ParseInt(string, 10, 64)
+#int到string
+string:=strconv.Itoa(int)
+#int64到string
+string:=strconv.FormatInt(int64,10)
+
+//int int32 int64之间转换可以强制转换
+```
+
+mac下编译Linux可运行的程序
+
+```bash
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build main.go
+```
+
+mac下编译windows64可运行的程序
+
+```bash
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go
+```
+
