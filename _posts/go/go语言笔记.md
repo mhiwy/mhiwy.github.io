@@ -1,3 +1,13 @@
+---
+layout: blog
+istop: true
+title: "go语言学习笔记"
+background-image: https://o243f9mnq.qnssl.com/2017/06/116099051.jpg
+date:  2019-12-25
+category: go
+tags:
+- go
+---
 命名管道：只有管道两端都准备好才进行数据流动
 
 内核态和用户态：系统调用的时候CPU切换到内核态
